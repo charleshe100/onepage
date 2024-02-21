@@ -2,231 +2,360 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>MyWeb</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">  
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+  <title>Dogs' Home</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
     integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
-    crossorigin="anonymous" referrerpolicy="no-referrer" />  
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link href="https://fonts.googleapis.com/css2?family=Leckerli+One&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Salsa&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.datatables.net/1.13.7/css/jquery.dataTables.css" />
   <style>
     body{
-      background-image: url(./imgs/bg.jpg);
-      font-family: 'Arial';
-      font-weight: bold;
+      /* height: 400vh; */
     }
+    nav{
+      opacity: 80%;
+    }
+    .carouselmgt{
+      margin-top:60px;
+    }
+    footer a{
+      height: 220px;
+    }
+    a{
+      text-decoration: none;
+    }
+    .bsDotted{
+      border-right-style: dotted;
+    }
+    .textPink{
+      color: #d63384;
+    }
+    .imgCenter{
+      display: flex;
+      /* flex-wrap: wrap; */
+      justify-content: center;
+      align-items: center;
+    }
+    .bgprimarycolor{
+      background-color: #ffbe98;
+    }
+    .dogcolor{
+      color: #964f4c;
+    }
+    h1,h2,h3,.textprimarycolor{
+      /* color: #85677b; */
+      /* font-family: "Leckerli One", cursive;
+      font-weight: 400;
+      font-style: normal; */
+      color: #c5a253;
+      font-family: "Salsa", cursive;
+      font-weight: 400;
+      font-style: normal;
+    }
+    .textsecondarycolor{
+      color: #ca848a;
+    }
+    /* .leckerli-one-regular {
+      font-family: "Leckerli One", cursive;
+      font-weight: 400;
+      font-style: normal;
+    } */
+
   </style>
+
 </head>
 
-<body>
-  <!-- navbar -->
-  <nav class="navbar navbar-expand-lg bg-body-tertiary fixed-top">
-    <div class="container-fluid">
-      <a class="navbar-brand" href="#">聖誕活動</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
-        aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-        <div class="navbar-nav">
-          <a class="nav-link active" aria-current="page" href="../index.html#portfolio">Portfolio</a>
+<body>  
+  <!-- nav -->
+  <nav class="navbar navbar-expand-lg bgprimarycolor fixed-top">
+    <div class="container d-flex justify-content-around">
+      <!-- HOME -->
+      <div>
+        <a class="navbar-brand text-dark" href="index.html">Home</a>
+      </div>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <!-- middle -->
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0 mx-auto fw-bold">
+          <li class="nav-item">
+            <a class="nav-link text-dark" href="#title1">Feeding</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-dark" href="#title2">Breed</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-dark" href="#title3">Hospital</a>
+          </li>          
+        </ul>
+        <!-- dropdown -->
+        <div class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle text-dark" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              <i class="fa-solid fa-earth-americas fs-3"></i>
+            </a>            
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <li><a class="dropdown-item" href="#">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/72/Flag_of_the_Republic_of_China.svg/33px-Flag_of_the_Republic_of_China.svg.png" class="shadow">&nbsp;&nbsp;TW</a></li>
+              <li><a class="dropdown-item" href="#">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/83/Flag_of_the_United_Kingdom_%283-5%29.svg/33px-Flag_of_the_United_Kingdom_%283-5%29.svg.png" class="shadow">&nbsp;&nbsp;EN</a></li>
+              <li><a class="dropdown-item" href="#">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9e/Flag_of_Japan.svg/33px-Flag_of_Japan.svg.png" class="shadow">&nbsp;&nbsp;JP</a></li>
+              <li><a class="dropdown-item" href="#">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/Flag_of_South_Korea.svg/33px-Flag_of_South_Korea.svg.png" class="shadow">&nbsp;&nbsp;KR</a></li>
+              <li><a class="dropdown-item" href="#">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/Flag_of_Thailand.svg/33px-Flag_of_Thailand.svg.png" class="shadow">&nbsp;&nbsp;TH</a></li>
+            </ul>
         </div>
       </div>
     </div>
-    <!-- <form class="d-flex" role="search">
-      <button class="btn btn-primary me-3" type="submit">Login</button>
-    </form> -->
   </nav>
-  <div class="container">
-    <!-- carousel -->
-    <div class="row">
-      <div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
-        <div id="carouselExampleCaptions" class="carousel slide">
-          <div class="carousel-indicators">
-            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
-              aria-current="true" aria-label="Slide 1"></button>
-            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
-              aria-label="Slide 2"></button>
-            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
-              aria-label="Slide 3"></button>
-          </div>
-          <div class="carousel-inner">
-            <div class="carousel-item active" data-bs-interval="3000">
-              <img src="./imgs/photo-03.jpg" class="d-block w-100" alt="...">
-              <div class="carousel-caption d-none d-md-block">
-                <h5>Merry Christmas！</h5>
-                <!-- <p>Some representative placeholder content for the first slide.</p> -->
-              </div>
-            </div>
-            <div class="carousel-item active" data-bs-interval="3000">
-              <img src="./imgs/photo-02.jpg" class="d-block w-100" alt="...">
-              <div class="carousel-caption d-none d-md-block">
-                <h5>Merry Christmas！</h5>
-                <!-- <p>Some representative placeholder content for the second slide.</p> -->
-              </div>
-            </div>
-            <div class="carousel-item active" data-bs-interval="3000">
-              <img src="./imgs/photo-01.jpg" class="d-block w-100" alt="...">
-              <div class="carousel-caption d-none d-md-block">
-                <h5>Merry Christmas！</h5>
-                <!-- <p>Some representative placeholder content for the third slide.</p> -->
-              </div>
-            </div>
-          </div>
-          <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
-            data-bs-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Previous</span>
-          </button>
-          <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
-            data-bs-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Next</span>
-          </button>
-        </div>
+  <!-- carousel -->
+  <div class="carouselmgt">  
+  <div id="carouselExampleFade" class="carousel slide carousel-fade" data-bs-ride="carousel">
+    <div class="carousel-inner mx-auto">
+      <div class="carousel-item active">
+        <img src="https://picsum.photos/id/20/1200/500" class="d-block mx-auto">
+      </div>
+      <div class="carousel-item">
+        <img src="https://picsum.photos/id/30/1200/500" class="d-block mx-auto">
+      </div>
+      <div class="carousel-item">
+        <img src="https://picsum.photos/id/43/1200/500" class="d-block mx-auto">
       </div>
     </div>
-    <!-- card -->
-    <div class="row mt-4">
-      <div class="col-12 col-xl-3 mt-2">
-        <div class="card w-80 mx-auto" style="width: 18rem;">
-          <img src="imgs/newTaipei.jpg" class="card-img-top" alt="...">
-          <div class="card-body">
-            <h5 class="card-title">新北歡樂耶誕城</h5>
-            <p class="card-text">桑塔熊睽違已久出現在新北大樓主秀！桑塔熊滿懷期待的心情，著手準備這場由他當主角的2023新北耶誕城！</p>
-            <div class="d-grid gap-2">
-              <a href="https://christmasland.ntpc.gov.tw/index.php" class="btn btn-success">Go！</a>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="col-12 col-xl-3 mt-2 d-flex justify-content-center">
-        <div class="card" style="width: 18rem;">
-          <img src="./imgs/gingerbread.jpg" class="card-img-top" alt="...">
-          <div class="card-body">
-            <h5 class="card-title">童話薑餅耶誕樹</h5>
-            <p class="card-text">知名台北聖誕節活動：新光三越南西店中山站【童話薑餅耶誕樹】將於即日起至2024年1月4日在心中山線型公園盛大開展！</p>
-            <div class="d-grid gap-2">
-              <a href="https://www.cosmopolitan.com/tw/lifestyle/travel/g45925979/jo-malone/"
-                class="btn btn-success">Go！</a>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="col-12 col-xl-3 mt-2 d-flex justify-content-center">
-        <div class="card" style="width: 18rem;">
-          <img src="./imgs/snow.jpg" class="card-img-top" alt="...">
-          <div class="card-body">
-            <h5 class="card-title">【新光三越】時光之樹</h5>
-            <p class="card-text">由超過萬株雪白的手工葉片打造而成的17米高雪白時光之樹，八芒星在樹頂閃耀，象徵著人們的希望與美好願景。</p>
-            <div class="d-grid gap-2">
-              <a href="https://www.skm.com.tw/page/121/P1700061100153" class="btn btn-success">Go！</a>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="col-12 col-xl-3 mt-2">
-        <div class="card w-80 mx-auto " style="width: 18rem;">
-          <div class="text-center mt-4 display-1 text-success mb-3">
-            <i class="fa-solid fa-tree"></i>
-          </div>
-          <div class="card-body">
-            <h5 class="card-title">聖誕樹</h5>
-            <p class="card-text">聖誕樹 （英語：Christmas tree）
-              是聖誕節期間，慶祝中最有名的傳統擺設。在過去，通常人們在聖誕前後把一棵常綠植物如松樹弄進屋裡或者在戶外，並用聖誕燈和彩色的裝飾物裝飾，把一個星星放在樹的頂上。
-            </p>
-            <!-- <div class="d-grid gap-2">
-                <a href="#" class="btn btn-success text-light">Go somewhere</a>
-              </div> -->
-          </div>
-        </div>
-      </div>
-
+    <!-- <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button> -->
+    <!-- <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button> -->
+  </div>
+  </div> 
+  <!-- 年度代表色 -->
+  <!-- <div class="fs-3 text-center">
+    <a href="https://www.pantone.com/hk/tc/color-of-the-year/2024/color-harmonies">配色參考</a>
+  </div> -->
+  <!-- title1 -->
+  <div class="container text-center my-5" id="title1">    
+        <h1 class="fw-bold">FEEDING</h1><br>
+        <h4>養狗是一件很有趣的事情，但也是一項責任重大的工作！以下是四項養狗要注意的重要事項：</h4>    
+  </div>
+  <!-- title1 內容 1 -->
+  <div class="container-fluid">  
+  <div class="row d-flex w-75 my-5 mx-auto">
+    <div class="col col-6 p-5 bsDotted">
+      <div class=""><h1><i class="fa-solid fa-bone fs-1 dogcolor"></i></h1></div>
+      <div class="fw-bold"><h2>Food</h2></div>
+      <div class=""><h5 class="textsecondarycolor">適當的飲食</h5></div>
+      <div class=""><h5>狗的飲食應該是均衡的，包括蛋白質、碳水化合物、脂肪、維生素和礦物質。選擇適合你狗的年齡、體重和活動水平的食物。定時餵食，避免過量或過少。</h5></div>
+      <div class=""><a href="">其他詳細資訊</a></div>
     </div>
-    <!-- collapse -->
-    <div class="row mt-4">
-      <p class="d-inline-flex gap-1 w-100">
-        <a class="btn btn-danger col-8" data-bs-toggle="collapse" href="#multiCollapseExample1" role="button"
-          aria-expanded="false" aria-controls="multiCollapseExample1">聖誕節</a>
-        <button class="btn btn-danger col-4" type="button" data-bs-toggle="collapse"
-          data-bs-target="#multiCollapseExample2" aria-expanded="false" aria-controls="multiCollapseExample2">聖誕老人</button>
-      </p>
-      <div class="col-12 col-xl-8">
-        <div class="collapse multi-collapse" id="multiCollapseExample1">
-          <div class="card card-body">
-            又稱耶誕節，是基督教紀念耶穌降生的節日，西方社會定於12月25日，但東方教會的國家稱其主顯節，則大致定於1月7日。其為基督教禮儀年曆的重要節日，部分教派會透過將臨期及聖誕夜來準備，並以八日慶典與禮儀節期延續慶祝。聖誕節也是許多國家和地區、尤其是西方國家等以基督教文化為主流之地區的公共假日；在教會以外的場合，聖誕節已轉化成一種民俗節日，並常與日期相近的公曆新年合稱「聖誕及新年季」。
-          </div>
-        </div>
-      </div>
-      <div class="col-12 col-xl-4">
-        <div class="collapse multi-collapse" id="multiCollapseExample2">
-          <div class="card card-body">
-            聖誕老人的原型為羅馬帝國時期米拉城的主教聖尼古拉（聖尼閣），他曾經在夜晚爬上他們的屋頂，把金幣從煙囪投入他們家，幫助她們逃過被賣的命運。後人感謝他，所以就定了聖尼古拉節，聖誕老人的譯音就是聖尼古拉。大航海時代以後，美國的可口可樂公司將現代形象的耶誕老人描繪出來，並加入聲音，變成我們今天看到的聖誕老人身穿紅大衣、頭戴聖誕帽的形象。
-          </div>
-        </div>
-      </div>
-    </div>
-    <!-- dropdown -->
-    <div class="row mt-4">
-      <div class="btn-group col-12 col-xl-4 mt-2">
-        <button type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown"
-          aria-expanded="false">Action</button>
-        <ul class="dropdown-menu">
-          <li><a class="dropdown-item" href="./calendar/index.php">Calendar</a></li>
-          <li><a class="dropdown-item" href="#">Another action</a></li>
-          <li><a class="dropdown-item" href="#">Something else here</a></li>
-          <li>
-            <hr class="dropdown-divider">
-          </li>
-          <li><a class="dropdown-item" href="#">Separated link</a></li>
-        </ul>
-      </div>
-      <div class="btn-group col-12 col-xl-8 mt-2">
-        <button type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown"
-          aria-expanded="false">Action</button>
-        <ul class="dropdown-menu">
-          <li><a class="dropdown-item" href="#">Action</a></li>
-          <li><a class="dropdown-item" href="#">Another action</a></li>
-          <li><a class="dropdown-item" href="#">Something else here</a></li>
-          <li>
-            <hr class="dropdown-divider">
-          </li>
-          <li><a class="dropdown-item" href="#">Separated link</a></li>
-        </ul>
-      </div>
-
+    <div class="col col-6 imgCenter">
+      <img src="https://picsum.photos/id/50/500/350">
     </div>
   </div>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
+  <!-- title1 內容 2 -->
+  <div class="row d-flex w-75 my-5 mx-auto">
+    <div class="col col-6 bsDotted imgCenter">
+      <img src="https://picsum.photos/id/60/500/350">
+    </div>
+    <div class="col col-6 p-5">
+      <div class=""><h1><i class="fa-solid fa-baseball fs-1 dogcolor"></i></h1></div>
+      <div class="fw-bold"><h2>Sport</h2></div>
+      <div class=""><h5 class="textsecondarycolor">適當的運動</h5></div>
+      <div class=""><h5>狗需要適當的運動來保持健康。根據狗的品種和年齡，每天至少需要30分鐘到2小時的運動。這可以包括散步、跑步、游泳或玩耍。</h5></div>
+      <div class=""><a href="">其他詳細資訊</a></div>
+    </div>    
+  </div>
+  <!-- title1 內容 3 -->
+  <div class="row d-flex w-75 my-5 mx-auto">
+    <div class="col col-6 p-5 bsDotted">
+      <div class=""><h1><i class="fa-solid fa-hospital fs-1 dogcolor"></i></h1></div>
+      <div class="fw-bold"><h2>Body checkup</h2></div>
+      <div class=""><h5 class="textsecondarycolor">定期醫療檢查</h5></div>
+      <div class=""><h5>狗需要定期的醫療檢查，包括疫苗接種、寄生蟲預防和健康檢查。及時發現和治療疾病，可以保護你的狗的健康。</h5></div>
+      <div class=""><a href="">其他詳細資訊</a></div>
+    </div>
+    <div class="col col-6 imgCenter">
+      <div>
+        <img src="https://picsum.photos/id/55/500/350">
+      </div>
+    </div>
+  </div>  
+  <!-- title1 內容 4 -->
+  <div class="row d-flex w-75 my-5 mx-auto">
+    <div class="col col-6 bsDotted imgCenter">
+      <img src="https://picsum.photos/id/64/500/350">
+    </div>
+    <div class="col col-6 p-5">
+      <div class=""><h1><i class="fa-solid fa-paw fs-1 dogcolor"></i></h1></div>
+      <div class="fw-bold"><h2>Train</h2></div>
+      <div class=""><h5 class="textsecondarycolor">社交化和訓練</h5></div>
+      <div class=""><h5>狗需要適當的社交化和訓練，以幫助他們成為良好的家庭成員。這包括與其他狗和人的互動，以及基本的訓練，如坐下、待命和走路。</h5></div>
+      <div class=""><a href="">其他詳細資訊</a></div>
+    </div>    
+  </div>
+  </div>
+  <!-- title2 -->
+  <div class="container text-center my-5" id="title2">
+    <h1 class="fw-bold">BREED</h1><br>
+    <h4>可愛的狗狗，有很多品種，以下介紹小型犬、中型犬、大型犬各兩種品種。</h4>
+  </div>
+  <!-- title2 card -->
+  <div class="container w-75 mx-auto">
+    <div class="row my-5">
+      <div class="col col-4">
+        <div class="card border-0 mx-auto" style="width: 18rem;">
+          <img src="https://picsum.photos/id/65/200/225" class="card-img-top rounded-4" alt="...">
+          <div class="card-body text-center">
+            <p class="card-text">
+              <h3 class="fw-bold">Lerom</h3> Some quick example text to build on the card title.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col col-4">
+        <div class="card border-0 mx-auto" style="width: 18rem;">
+          <img src="https://picsum.photos/id/70/200/225" class="card-img-top rounded-4" alt="...">
+          <div class="card-body text-center">
+            <p class="card-text">
+              <h3 class="fw-bold">Lerom</h3> Some quick example text to build on the card title.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col col-4">
+        <div class="card border-0 mx-auto" style="width: 18rem;">
+          <img src="https://picsum.photos/id/80/200/225" class="card-img-top rounded-4" alt="...">
+          <div class="card-body text-center">
+            <p class="card-text">
+              <h3 class="fw-bold">Lerom</h3> Some quick example text to build on the card title.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row d-flex my-5">
+      <div class="col">
+        <div class="card border-0 mx-auto" style="width: 18rem;">
+          <img src="https://picsum.photos/id/90/200/225" class="card-img-top rounded-4" alt="...">
+          <div class="card-body text-center">
+            <p class="card-text">
+              <h3 class="fw-bold">Lerom</h3> Some quick example text to build on the card title.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card border-0 mx-auto" style="width: 18rem;">
+          <img src="https://picsum.photos/id/100/200/225" class="card-img-top rounded-4" alt="...">
+          <div class="card-body text-center">
+            <p class="card-text">
+              <h3 class="fw-bold">Lerom</h3> ome quick example text to build on the card title.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card border-0 mx-auto" style="width: 18rem;">
+          <img src="https://picsum.photos/id/110/200/225" class="card-img-top rounded-4" alt="...">
+          <div class="card-body text-center">
+            <p class="card-text">
+              <h3 class="fw-bold">Lerom</h3> ome quick example text to build on the card title.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+  <!-- title3 -->
+  <div class="container text-center my-5" id="title3">
+    <h1 class="fw-bold">HOSPITAL</h1><br>
+    <h4>台北市動物醫院一覽表</h4>
+    <div class="fs-5 mx-auto">
+      <table id="myTable" class="display">
+        <thead>
+          <tr>
+            <th class="text-center">醫院名稱</th>
+            <th class="text-center">地址</th>
+            <th class="text-center">負責人</th>
+            <th class="text-center">電話</th>
+          </tr>
+        </thead>
+        <tbody>
+          
+        </tbody>
+      </table>
+    </div>
+  </div>
 
 
+  <!-- footer -->
+  <footer class="fluid bgprimarycolor">
+  <div class="container h-100 p-4 w-75 mx-auto">
+    <div class="row">
+      <div>
+        <i class="fa-solid fa-dog fs-1 dogcolor"></i>&nbsp;&nbsp;&nbsp; <a href="" class="link-dark"><i class="fa-brands fa-apple fs-5"></i> App Store</a> &nbsp;|&nbsp; <a href="" class="link-dark"><i class="fa-brands fa-google-play"></i> Google Play</a> &nbsp;|&nbsp; <a href="" class="link-dark"><i class="fa-solid fa-desktop"></i> Desktop</a> &nbsp;|&nbsp; <a href="" class="link-dark"><i class="fa-brands fa-windows"></i> Windows Store</a> 
+      </div>
+    </div>
+    <hr>
+    <div class="row">
+      <div class="d-flex justify-content-between align-items-center">
+      <div>
+        ©️ DH Corporation &nbsp;&nbsp;&nbsp;<a href="" class="link-dark">常見問題</a> &nbsp;|&nbsp; <a href="" class="link-dark">服務條款</a> &nbsp;|&nbsp; <a href="" class="link-dark">隱私權政策</a>        
+      </div>
+      <div>
+        <a href="" class="fs-2 text-danger"><i class="fa-brands fa-youtube"></i></a>&nbsp;&nbsp;&nbsp;
+        <a href="" class="fs-2 text-primary"><i class="fa-brands fa-facebook"></i></a>&nbsp;&nbsp;&nbsp;
+        <a href="" class="fs-2 text-success"><i class="fa-brands fa-line"></i></a>&nbsp;&nbsp;&nbsp;
+        <a href="" class="fs-2 textPink"><i class="fa-brands fa-square-instagram"></i></a>&nbsp;&nbsp;&nbsp;
+      </div>
+      </div>
+    </div>
+  </div>
+</footer>
 
-
-
-
-
+  <script src="./js/jquery-3.7.1.min.js"></script>
+  <script src="https://cdn.datatables.net/1.13.7/js/jquery.dataTables.js"></script>
+  <script src="https://cdn.datatables.net/1.13.7/js/jquery.dataTables.js"></script>
   <script>
-    const myCarouselElement = document.querySelector('#myCarousel')
-    const carousel = new bootstrap.Carousel(myCarouselElement, {
-      interval: 2000,
-      touch: false
-    })
+  $(document).ready(function(){
+    const tbody = $('tbody')
+    let url = './data/animalHospital.json';
+    $.ajax({
+      url: url,
+      type: 'get',
+      data:"data",
+      dataType: 'json',
+      beforeSend: function(xhr) {
+        xhr.overrideMimeType('application/json; charset=big5'); // 使用 big5 編碼
+      },
+      success: function(res) {
+        console.log('res',res);
+        $.each(res,function(key,value){
+          console.log('key',key);
+          console.log('value',value);
+          console.log('value.name',value.name);
+          let content=`
+          <tr>
+            <td>${value.name}</td>
+            <td>${value.addr}</td>
+            <td>${value.principal}</td>
+            <td>${value.tel}</td>
+          </tr>
+          `
+          tbody.append(content);
+        })
+        $('#myTable').DataTable();
+      }
+  });
+  
+  
+     
+  })
+        
+    
+    
   </script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-
-
 </body>
 
 </html>
