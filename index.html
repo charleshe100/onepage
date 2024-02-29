@@ -18,9 +18,10 @@
     }
     nav{
       opacity: 80%;
+      height: 80px;
     }
     .carouselmgt{
-      margin-top:60px;
+      margin-top:80px !important;
     }
     footer a{
       height: 220px;
@@ -36,7 +37,6 @@
     }
     .imgCenter{
       display: flex;
-      /* flex-wrap: wrap; */
       justify-content: center;
       align-items: center;
     }
@@ -46,11 +46,7 @@
     .dogcolor{
       color: #964f4c;
     }
-    h1,h2,h3,.textprimarycolor{
-      /* color: #85677b; */
-      /* font-family: "Leckerli One", cursive;
-      font-weight: 400;
-      font-style: normal; */
+    h1,h2,h3,.textprimarycolor{      
       color: #c5a253;
       font-family: "Salsa", cursive;
       font-weight: 400;
@@ -59,31 +55,34 @@
     .textsecondarycolor{
       color: #ca848a;
     }
-    /* .leckerli-one-regular {
-      font-family: "Leckerli One", cursive;
-      font-weight: 400;
-      font-style: normal;
-    } */
+
+    .nav-link:hover{
+      border-bottom: 2px solid #d63384 ;
+      font-size: 20px;
+      color: #d63384 !important;
+    }
+    .card:hover{
+      transform: scale(1.05);
+      box-shadow: 5px 5px 5px #ccc;
+    }
+    .otherlink:hover{
+      width: 110px;
+      background: #964f4c;
+      box-shadow: 5px 5px 5px #ccc;
+      padding: 5px;
+      color: white !important;  
+      border-radius: 8px;  
+    }
+
+    .footerlink:hover{
+      color: #d63384 !important;
+    }
 
   </style>
 
 </head>
 
-<body>  
-  <!-- <nav class="navbar navbar-expand-lg bgprimarycolor fixed-top" id="sideNav">
-    <a class="navbar-brand js-scroll-trigger" href="#page-top">
-        <span class="d-block d-lg-none">Home</span>
-        <span class="d-none d-lg-block"><img class="img-fluid img-profile rounded-circle mx-auto mb-2" src="assets/img/profile.jpg" alt="..." /></span>
-    </a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
-    <div class="collapse navbar-collapse" id="navbarResponsive">
-        <ul class="navbar-nav">
-            <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#title1">Feeding</a></li>
-            <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#title2">Breed</a></li>
-            <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#title3">Hospital</a></li>
-        </ul>
-    </div>
-</nav> -->
+<body>    
   <!-- nav -->
   <div class="container-fluid">  
   <nav class="navbar navbar-expand-sm bgprimarycolor fixed-top">
@@ -102,6 +101,9 @@
           </li>
           <li class="nav-item">
             <a class="nav-link text-dark js-scroll-trigger" href="#title3">Hospital</a>
+          </li>          
+          <li class="nav-item">
+            <a class="nav-link text-dark js-scroll-trigger" href="">Portfolio</a>
           </li>          
         </ul>
         <div class="nav-item dropdown">
@@ -141,15 +143,7 @@
       <div class="carousel-item" data-bs-interval="4000">
         <img src="./img/carousel-04.png" class="d-block mx-auto">
       </div>
-    </div>
-    <!-- <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
-      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-      <span class="visually-hidden">Previous</span>
-    </button> -->
-    <!-- <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="next">
-      <span class="carousel-control-next-icon" aria-hidden="true"></span>
-      <span class="visually-hidden">Next</span>
-    </button> -->
+    </div>    
   </div>
   </div> 
   <!-- 年度代表色 -->
@@ -163,57 +157,57 @@
   </div>
   <!-- title1 內容 1 -->
   <div class="container-fluid">  
-  <div class="row d-flex w-75 my-5 mx-auto col-12 col-sm-6">
-    <div class="col col-sm-6 p-5 bsDotted">
+  <div class="row d-flex w-75 my-5 mx-auto">
+    <div class="col col-12 col-lg-6 p-5 bsDotted">
       <div class=""><h1><i class="fa-solid fa-bone fs-1 dogcolor"></i></h1></div>
       <div class="fw-bold"><h2>Food</h2></div>
       <div class=""><h5 class="textsecondarycolor">適當的飲食</h5></div>
       <div class=""><h5>狗的飲食應該是均衡的，包括蛋白質、碳水化合物、脂肪、維生素和礦物質。選擇適合你狗的年齡、體重和活動水平的食物。定時餵食，避免過量或過少。</h5></div>
-      <div class=""><a href="">其他詳細資訊</a></div>
+      <div class=""><a href="" class="otherlink">其他詳細資訊</a></div>
     </div>
-    <div class="col col-sm-6 imgCenter">
+    <div class="col col-12 col-lg-6 imgCenter">
       <img src="./img/food.png">
     </div>
   </div>
   <!-- title1 內容 2 -->
-  <div class="row d-flex w-75 my-5 mx-auto col-12 col-sm-6">
-    <div class="col col-sm-6 bsDotted imgCenter">
+  <div class="row d-flex w-75 my-5 mx-auto">
+    <div class="col col-12 col-lg-6 bsDotted imgCenter">
       <img src="./img/sport.png">
     </div>
-    <div class="col col-sm-6 p-5">
+    <div class="col col-12 col-lg-6 p-5">
       <div class=""><h1><i class="fa-solid fa-baseball fs-1 dogcolor"></i></h1></div>
       <div class="fw-bold"><h2>Sport</h2></div>
       <div class=""><h5 class="textsecondarycolor">適當的運動</h5></div>
       <div class=""><h5>狗需要適當的運動來保持健康。根據狗的品種和年齡，每天至少需要30分鐘到2小時的運動。這可以包括散步、跑步、游泳或玩耍。</h5></div>
-      <div class=""><a href="">其他詳細資訊</a></div>
+      <div class=""><a href="" class="otherlink">其他詳細資訊</a></div>
     </div>    
   </div>
   <!-- title1 內容 3 -->
-  <div class="row d-flex w-75 my-5 mx-auto col-12 col-sm-6">
-    <div class="col col-sm-6 p-5 bsDotted">
+  <div class="row d-flex w-75 my-5 mx-auto">
+    <div class="col col-12 col-lg-6 p-5 bsDotted">
       <div class=""><h1><i class="fa-solid fa-hospital fs-1 dogcolor"></i></h1></div>
       <div class="fw-bold"><h2>Body checkup</h2></div>
       <div class=""><h5 class="textsecondarycolor">定期醫療檢查</h5></div>
       <div class=""><h5>狗需要定期的醫療檢查，包括疫苗接種、寄生蟲預防和健康檢查。及時發現和治療疾病，可以保護你的狗的健康。</h5></div>
-      <div class=""><a href="">其他詳細資訊</a></div>
+      <div class=""><a href="" class="otherlink">其他詳細資訊</a></div>
     </div>
-    <div class="col col-sm-6 imgCenter">
+    <div class="col col-12 col-lg-6 imgCenter">
       <div>
         <img src="./img/hospital.png">
       </div>
     </div>
   </div>  
   <!-- title1 內容 4 -->
-  <div class="row d-flex w-75 my-5 mx-auto col-12 col-sm-6">
-    <div class="col col-sm-6 bsDotted imgCenter">
+  <div class="row d-flex w-75 my-5 mx-auto">
+    <div class="col col-12 col-lg-6 bsDotted imgCenter">
       <img src="./img/train.png">
     </div>
-    <div class="col col-sm-6 p-5">
+    <div class="col col-12 col-lg-6 p-5">
       <div class=""><h1><i class="fa-solid fa-paw fs-1 dogcolor"></i></h1></div>
       <div class="fw-bold"><h2>Train</h2></div>
       <div class=""><h5 class="textsecondarycolor">社交化和訓練</h5></div>
       <div class=""><h5>狗需要適當的社交化和訓練，以幫助他們成為良好的家庭成員。這包括與其他狗和人的互動，以及基本的訓練，如坐下、待命和走路。</h5></div>
-      <div class=""><a href="">其他詳細資訊</a></div>
+      <div class=""><a href="" class="otherlink">其他詳細資訊</a></div>
     </div>    
   </div>
   </div>
@@ -224,8 +218,8 @@
   </div>
   <!-- title2 card -->
   <div class="container w-75 mx-auto">
-    <div class="row d-flex my-5">
-      <div class="col">
+    <div class="row d-flex">
+      <div class="col my-3">
         <div class="card border-0 mx-auto" style="width: 18rem;">
           <img src="./img/card-01.png" class="card-img-top rounded-4" alt="...">
           <div class="card-body">
@@ -234,7 +228,7 @@
           </div>
         </div>
       </div>
-      <div class="col">
+      <div class="col my-3">
         <div class="card border-0 mx-auto" style="width: 18rem;">
           <img src="./img/card-02.png" class="card-img-top rounded-4" alt="...">
           <div class="card-body">
@@ -243,7 +237,7 @@
           </div>
         </div>
       </div>
-      <div class="col">
+      <div class="col my-3">
         <div class="card border-0 mx-auto" style="width: 18rem;">
           <img src="./img/card-03.png" class="card-img-top rounded-4" alt="...">
           <div class="card-body">
@@ -253,8 +247,8 @@
         </div>
       </div>
     </div>
-    <div class="row d-flex my-5">
-      <div class="col">
+    <div class="row d-flex">
+      <div class="col my-3">
         <div class="card border-0 mx-auto" style="width: 18rem;">
           <img src="./img/card-04.png" class="card-img-top rounded-4" alt="...">
           <div class="card-body">
@@ -263,7 +257,7 @@
           </div>
         </div>
       </div>
-      <div class="col">
+      <div class="col my-3">
         <div class="card border-0 mx-auto" style="width: 18rem;">
           <img src="./img/card-05.png" class="card-img-top rounded-4" alt="...">
           <div class="card-body">
@@ -272,7 +266,7 @@
           </div>
         </div>
       </div>
-      <div class="col">
+      <div class="col my-3">
         <div class="card border-0 mx-auto" style="width: 18rem;">
           <img src="./img/card-06.png" class="card-img-top rounded-4" alt="...">
           <div class="card-body">
@@ -311,14 +305,14 @@
   <div class="container h-100 p-4 w-75 mx-auto">
     <div class="row">
       <div>
-        <i class="fa-solid fa-dog fs-1 dogcolor"></i>&nbsp;&nbsp;&nbsp; <a href="" class="link-dark"><i class="fa-brands fa-apple fs-5"></i> App Store</a> &nbsp;|&nbsp; <a href="" class="link-dark"><i class="fa-brands fa-google-play"></i> Google Play</a> &nbsp;|&nbsp; <a href="" class="link-dark"><i class="fa-solid fa-desktop"></i> Desktop</a> &nbsp;|&nbsp; <a href="" class="link-dark"><i class="fa-brands fa-windows"></i> Windows Store</a> 
+        <i class="fa-solid fa-dog fs-1 dogcolor"></i>&nbsp;&nbsp;&nbsp; <a href="" class="footerlink link-dark"><i class="fa-brands fa-apple fs-5"></i> App Store</a> &nbsp;|&nbsp; <a href="" class="footerlink link-dark"><i class="fa-brands fa-google-play"></i> Google Play</a> &nbsp;|&nbsp; <a href="" class="footerlink link-dark"><i class="fa-solid fa-desktop"></i> Desktop</a> &nbsp;|&nbsp; <a href="" class="footerlink link-dark"><i class="fa-brands fa-windows"></i> Windows Store</a> 
       </div>
     </div>
     <hr>
     <div class="row">
       <div class="d-flex flex-wrap justify-content-between align-items-center">
       <div class="col-12 col-lg-6">
-        ©️ DH Corporation &nbsp;&nbsp;&nbsp;<a href="" class="link-dark">常見問題</a> &nbsp;|&nbsp; <a href="" class="link-dark">服務條款</a> &nbsp;|&nbsp; <a href="" class="link-dark">隱私權政策</a>        
+        ©️ DH Corporation &nbsp;&nbsp;&nbsp;<a href="" class="footerlink link-dark">常見問題</a> &nbsp;|&nbsp; <a href="" class="footerlink link-dark">服務條款</a> &nbsp;|&nbsp; <a href="" class="footerlink link-dark">隱私權政策</a>        
       </div>
       <div class="col-12 col-lg-6">
         <a href="" class="fs-2 text-danger"><i class="fa-brands fa-youtube"></i></a>&nbsp;&nbsp;&nbsp;
